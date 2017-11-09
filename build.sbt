@@ -14,6 +14,18 @@ libraryDependencies += "com.github.nscala-time" %% "nscala-time" % "2.16.0"
 
 libraryDependencies += "org.specs2" %% "specs2-core" % "3.9.4" % "test"
 
+// Hadoop
+//libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "2.8.1"
+//libraryDependencies += "org.apache.hadoop" % "hadoop-hdfs" % "2.8.1"
+//libraryDependencies += "org.apache.hadoop" % "hadoop-yarn-client" % "2.8.1"
+
+// Spark
+val sparkVersion = "2.2.0"
+libraryDependencies += "org.apache.spark" %% "spark-core" % sparkVersion
+libraryDependencies += "org.apache.spark" %% "spark-sql" % sparkVersion
+libraryDependencies += "org.apache.spark" %% "spark-mllib" % sparkVersion
+libraryDependencies += "org.apache.spark" %% "spark-hive" % sparkVersion
+
 resolvers ++= Seq(
   Resolver.sonatypeRepo("releases"),
   Resolver.sonatypeRepo("snaspshots"),
